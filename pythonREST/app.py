@@ -1,5 +1,4 @@
 import os
-<<<<<<< HEAD
 import psycopg2
 from flask import Flask
 from datetime import datetime
@@ -68,16 +67,4 @@ def hello():
 
 if __name__ == "__main__":
     init_db()
-=======
-from flask import Flask
-
-app = Flask(__name__)
-
-@app.route("/")
-def hello():
-    name = os.getenv("NAME")
-    return f"<h1>Hello {name}</h1>"
-
-if __name__ == "__main__":
->>>>>>> a7a0aaa8050d65b897b8fd0fa2deef6709a2c143
     app.run(host="0.0.0.0", port=5001)
