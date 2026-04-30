@@ -14,7 +14,11 @@ spec:
     spec:
       containers:
         - name: hello
+<<<<<<< HEAD
           image: vegetarianez/hello-k8s:v2
+=======
+          image: vegetarianez/hello-k8s:latest
+>>>>>>> a7a0aaa8050d65b897b8fd0fa2deef6709a2c143
           ports:
             - containerPort: 5001
           env:
@@ -22,6 +26,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: hello-config
+<<<<<<< HEAD
                   key: NAME
             - name: DB_HOST
               value: "postgres-service"
@@ -34,3 +39,6 @@ spec:
                 secretKeyRef:
                   name: postgres-secret
                   key: POSTGRES_PASSWORD
+=======
+                  key: NAME
+>>>>>>> a7a0aaa8050d65b897b8fd0fa2deef6709a2c143
