@@ -1,0 +1,26 @@
+replicaCount: 1
+
+image:
+  repository: vegetarianez/pythonrest
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+nameOverride: "microshop"
+
+env:
+  name: "Nikita"
+  dbHost: "postgres-cluster-rw"
+
+serviceAccount:
+  create: true
+  name: "microshop-sa"
+
+autoscaling:
+  enabled: false
+
+service:
+  type: ClusterIP
+  port: 80
+
+httpRoute:
+  enabled: true
